@@ -1,0 +1,22 @@
+.secondary-header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    background-color: #fff;
+  }
+
+  .secondary-header-menu {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    padding-inline-start: 0;
+    height: 100%;
+  }
+
+  .secondary-header-menu-items {
+    margin: 0 40px;
+    letter-spacing: 0.3px;
+    color: rgb(100, 100, 100);
+  }
+
