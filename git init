@@ -1,0 +1,11 @@
+[33mcommit 0a26afbd40bc6fc7b3fa8e416cda28914d26124e[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Robert Garofalo <admin@creativecrewstudios.com>
+Date:   Wed Mar 10 13:48:06 2021 +1100
+
+    First commit - set up of daily dashboard
+
+[33mcommit d777a261e562882656dc55402c056cd6b224cbbe[m
+Author: Robert Garofalo <admin@creativecrewstudios.com>
+Date:   Tue Mar 9 18:56:51 2021 +1100
+
+    Initialize project using Create React App
