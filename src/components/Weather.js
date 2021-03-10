@@ -30,7 +30,6 @@ function Weather() {
           )
       }, [])
     
-      // console.log('here are the items: ', weatherItems);
    
 
 
