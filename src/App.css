@@ -30,8 +30,9 @@ margin: 25px 200px;
 .stocks-component {
   background-color: #fff;
   border-radius: 6px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
+a {
+  text-decoration: inherit;
+  color: inherit;  
+}

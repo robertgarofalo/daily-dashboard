@@ -1,3 +1,15 @@
 .weather-component {
     grid-area: weather;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.weather-component h1 {
+    margin-bottom: -15px;
+}
+
+.weather-description {
+    color: rgb(146, 146, 146);
 }
