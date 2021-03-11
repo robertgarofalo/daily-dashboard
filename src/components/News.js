@@ -4,7 +4,7 @@ import './News.css';
 function News() {
 
     const apiKey = '2ace9819edc14bc3be6cb1fcb582c738';
-    const url = `http://newsapi.org/v2/everything?domains=wsj.com&language=en&pageSize=4&page=4&apiKey=${apiKey}`;
+    const url = `http://newsapi.org/v2/everything?domains=wsj.com&language=en&pageSize=3&page=4&apiKey=${apiKey}`;
     
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
@@ -32,6 +32,12 @@ const formatDate = (dateString) => {
     return new Date(dateString).toLocaleDateString(undefined, options)
   }
 
+  //Shorten article titles
+  const shortenTitle = (title) => {
+    const shortenedTitle = title.slice(0, 38);
+    return shortenedTitle + '...';
+  }
+
     if (error) {
         return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
@@ -53,8 +59,8 @@ const formatDate = (dateString) => {
                             <div className="news-article">
                                 <img src={article.urlToImage} />
                                     <div className="article-text">
-                                        <li className="article-title">{article.title}</li>
-                                        <li className="article-meta">{article.author ? `${article.author} | ` : `${article.source.name} | ` }  <span>{formatDate(article.publishedAt)}</span></li>
+                                        <li className="article-title">{shortenTitle(article.title)}</li>
+                                        <li className="article-meta">{article.author ? `${article.author} ` : `${article.source.name} ` }  <p>{formatDate(article.publishedAt)}</p></li>
                                     </div>
                             </div>  
                             </a>        

@@ -33,13 +33,14 @@ padding-inline-start: 0;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
-height: 90%;
+height: 70%;
 }
 
 
 .news-article {
     display: flex;
     align-items: center;
+    margin-bottom: 25px;
  }
 
  .article-title {
@@ -53,7 +54,16 @@ height: 90%;
      padding-top: 5px;
  }
 
+ .article-meta p {
+     margin-top: 2px;
+ }
+
 img {
-    width: 100px;
+    width: 110px;
+    height: 70px;
     padding-right: 15px;
+}
+
+.more-option {
+    margin-top: -50px;
 }

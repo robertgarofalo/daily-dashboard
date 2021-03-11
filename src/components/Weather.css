@@ -4,12 +4,18 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-}
-
-.weather-component h1 {
-    margin-bottom: -15px;
+    background-color:rgb(98, 162, 221);
+    color: #fff;
+    padding-inline-start: 0;
 }
 
 .weather-description {
-    color: rgb(146, 146, 146);
+    margin-top: -20px;
+    margin-bottom: 25px;
+}
+
+.temperature-main {
+    font-size: 50px;
+    margin-top: 25px;
+    margin-bottom: -10px;
 }

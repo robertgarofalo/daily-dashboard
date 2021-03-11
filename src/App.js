@@ -19,8 +19,8 @@ function App() {
       </div>
 
       <div className="app-main-container">
-      <News />
-      <Weather />
+      {/* <News />
+      <Weather /> */}
       <Messages />
       <Stocks />
       <Calendar />
