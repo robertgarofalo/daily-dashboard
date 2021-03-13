@@ -1,3 +1,25 @@
 .messages-component {
     grid-area: messages;
 }
+
+.message {
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid #000; */
+    height: 80px;
+    /* background-color: green; */
+}
+
+.sender-image img{
+    width: 20px;
+    height: 20px;
+}
+
+.email-item {
+    /* background-color: pink; */
+    width: 100%;
+}
+
+.from {
+    margin: 10px;
+}
