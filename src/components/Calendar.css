@@ -1,3 +1,48 @@
 .calendar-component {
     grid-area: calendar;
+    /* display: flex; */
+    /* padding: 0 1px; */
+}
+
+
+.react-calendar {
+    /* background-color: pink !important; */
+    width: 100% !important;
+    height: 100% !important;
+    border: none !important;
+    /* border-top-left-radius: 6px !important;
+    border-top-right-radius: 6px !important; */
+    border-radius: 6px !important;
+}
+
+.react-calendar__navigation {
+    background-color:rgb(98, 162, 221);
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.react-calendar__navigation button:enabled:focus, 
+.react-calendar__navigation__label {
+    background-color:rgb(59, 138, 212) !important;
+}
+
+.react-calendar__navigation button {
+    color: #fff !important;
+}
+
+.react-calendar__tile--now {
+    background-color: tomato !important;
+}
+
+.react-calendar__navigation button:hover {
+    background-color:rgb(59, 138, 212) !important;
+   
+}
+
+.react-calendar__navigation__prev2-button{
+    border-top-left-radius: 6px;
+}
+
+.react-calendar__navigation__next2-button {
+ border-top-right-radius: 6px;
 }

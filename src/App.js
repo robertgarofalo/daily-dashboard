@@ -4,8 +4,7 @@ import SecondaryHeader from './components/SecondaryHeader';
 import News from './components/News';
 import Weather from './components/Weather';
 import Messages from './components/Messages';
-import Calendar from './components/Calendar';
-import Stocks from './components/Stocks';
+import CalendarComponent from './components/CalendarComponent';
 import Footer from './components/Footer';
 
 function App() {
@@ -19,11 +18,10 @@ function App() {
       </div>
 
       <div className="app-main-container">
-      {/* <News />
+      <News />
       <Weather />
-      <Messages /> */}
-      <Stocks />
-      <Calendar />
+      <Messages />
+      <CalendarComponent/>
       </div>
 
       <Footer />

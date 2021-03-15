@@ -25,7 +25,7 @@ import axios from 'axios';
         useEffect(() => {
             fetchRandomData().then((randomData) => {
                 console.log('here is just randomData', randomData);
-                // console.log('here is randomData,data', randomData);
+                setLoading(false);
                 setUserInfo(randomData.results) 
                             
             })

@@ -26,7 +26,7 @@ const requestSix = axios.get(six);
 const requestSeven = axios.get(seven);
 const requestEight = axios.get(eight);
  
-axios.all([requestOne, requestTwo, requestThree, requestFour, requestFive, requestSix, requestSeven, requestEight]).then(axios.spread((...responses) => {
+Promise.all([requestOne, requestTwo, requestThree, requestFour, requestFive, requestSix, requestSeven, requestEight]).then(axios.spread((...responses) => {
   const responseOne = responses[0]
   const responseTwo = responses[1]
   const responseThree = responses[2]
@@ -37,7 +37,10 @@ axios.all([requestOne, requestTwo, requestThree, requestFour, requestFive, reque
   const repsonseEight = responses[7]
 
   // use/access the results 
-  console.log('here is response one ', responseOne);
+
+console.log('the responses', responses)
+ return responses;
+
 
 })).catch(errors => {
   // react on errors.
@@ -55,26 +58,21 @@ const items = [
     <p className="item" data-value="5">5</p>,
 ];
 
-
-
+// fetchStocks();
 function Stocks() {
 
     const [ stockData, setStockData ] = useState([]);
 
-    useEffect(() => {
-        fetchStocks().then(randomData => {
-            console.log('here is just randomData', randomData);
-            console.log('here is just randomData for 0', randomData);
-            randomData.map(item => {
-                if (item.displaySymbol === 'TSLA'){
-                    alert(item.description);
-                }
-            })
-            console.log('here is randomData,data', randomData);
-            setStockData(randomData.results); 
+    useEffect(async () => {
+        // fetchStocks().then((randomData) => {
+        //     console.log('here is just randomData', randomData);
+        //     // console.log('here is randomData,data', randomData);
+        //     // setUserInfo(randomData.results) 
                         
-        })
-    }, []);
+        // })
+        const myArr = fetchStocks();
+        setStockData(myArr);
+    }, [stockData]);
 
     return (
         <div className="stocks-component">

@@ -11,10 +11,10 @@ body {
 .app-main-container {
 display: grid;
 grid-template-columns: repeat(3, 4fr);
-grid-template-rows: 350px 100px 400px; /* Adjust height of widgets*/
+grid-template-rows: 350px 100px 350px; /* Adjust height of widgets*/
 grid-template-areas: 
 "news weather messages"
-"news stocks messages"
+"news weather messages"
 "calendar calendar calendar";
 
 grid-gap: 25px;
@@ -36,3 +36,4 @@ a {
   text-decoration: inherit;
   color: inherit;  
 }
+

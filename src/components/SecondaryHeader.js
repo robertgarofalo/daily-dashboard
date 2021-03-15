@@ -2,7 +2,7 @@ import React from 'react'
 import './SecondaryHeader.css';
 
 function SecondaryHeader() {
-    const menuItems = ['Dashboard', 'News', 'Weather', 'Messages', 'Stock Market', 'Calendar'];
+    const menuItems = ['Dashboard', 'News', 'Weather', 'Messages', 'Calendar'];
 
     return (
        
