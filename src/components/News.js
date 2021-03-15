@@ -57,7 +57,7 @@ const formatDate = (dateString) => {
                         {items.articles.map(article =>(
                             <a href={article.url} target="_blank">
                             <div className="news-article">
-                                <img src={article.urlToImage} />
+                                <img className='news-img' src={article.urlToImage} />
                                     <div className="article-text">
                                         <li className="article-title">{shortenTitle(article.title)}</li>
                                         <li className="article-meta">{article.author ? `${article.author} ` : `${article.source.name} ` }  <p>{formatDate(article.publishedAt)}</p></li>

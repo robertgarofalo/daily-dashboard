@@ -1,3 +1,8 @@
 .stocks-component {
     grid-area: stocks;
+    /* width: 100px; */
+}
+
+.alice-carousel {
+    width: 200px;
 }

@@ -2,24 +2,98 @@
     grid-area: messages;
 }
 
+.messages-component h1, h3{
+    text-align: center;
+}
 .message {
     display: flex;
     flex-direction: row;
     /* border: 1px solid #000; */
-    height: 80px;
+    /* height: 80px; */
     /* background-color: green; */
+    /* padding: 5px; */
+    margin: 8px;
+}
+
+.message:hover {
+   background-color: rgb(241, 241, 241);
+   cursor: pointer;
+}
+
+.sender-image {
+    width: 80px;
+    position: relative;
+    top: 3px;
 }
 
 .sender-image img{
-    width: 20px;
-    height: 20px;
+    width: 60px;
+    border-radius: 50%;
 }
 
 .email-item {
-    /* background-color: pink; */
+    /* background-color: green; */
+    width: 80%;
+    padding-left: 10px;
+}
+
+.from, .email, .subject, .message-item, .email-date {
+    margin: 2px 10px;
+}
+
+.email {
+    font-size: 12px;
+}
+
+.subject, .message-item {
+    font-size: 14px;
+}
+
+.subject {
+    color: grey;
+}
+
+.email-date {
+    /* position: relative;
+    left: 12%;
+    bottom: 10px; */
+    font-weight: 800;
+    font-size: 12px;
+    /* background-color: greenyellow; */
+    width: 50px;
+}
+
+
+/* 
+.sender-image img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.email-item {
+    background-color: pink;
     width: 100%;
 }
 
 .from {
-    margin: 10px;
+    margin: 0 0 10px 10px;
 }
+.email {
+    font-size: 10px;
+    position: relative;
+    bottom: 3px;
+    padding-left: 10px;
+}
+
+.subject {
+     margin-top: -10px;
+    padding-left: 10px;
+    margin-bottom: -10px;
+    font-size: 12px;
+}
+
+.message-item {
+    padding-top: 10px;
+    padding-left: 10px;
+} */

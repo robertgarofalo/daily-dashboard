@@ -14,7 +14,7 @@ grid-template-columns: repeat(3, 4fr);
 grid-template-rows: 350px 100px 400px; /* Adjust height of widgets*/
 grid-template-areas: 
 "news weather messages"
-"news stocks stocks"
+"news stocks messages"
 "calendar calendar calendar";
 
 grid-gap: 25px;

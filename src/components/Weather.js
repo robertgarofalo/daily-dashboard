@@ -136,7 +136,7 @@ function Weather() {
                 />
                 
                 <p className="temperature-main">{weatherItems.main.temp.toFixed(0)}ºC</p>
-                <p className="temperature-min-max">Low: {weatherItems.main.temp_min.toFixed(0)}º  |  High: {weatherItems.main.temp_max}º</p>
+                <p className="temperature-min-max">Low: {weatherItems.main.temp_min.toFixed(0)}º  |  High: {weatherItems.main.temp_max.toFixed(0)}º</p>
             </div>
         )
     }
