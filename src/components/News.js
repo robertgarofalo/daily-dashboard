@@ -4,7 +4,7 @@ import './News.css';
 function News() {
 
     const apiKey = '2ace9819edc14bc3be6cb1fcb582c738';
-    const url = `http://newsapi.org/v2/everything?domains=wsj.com&language=en&pageSize=3&page=4&apiKey=${apiKey}`;
+    const url = `https://newsapi.org/v2/everything?domains=wsj.com&language=en&pageSize=3&page=4&apiKey=${apiKey}`;
     
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
