@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Weather.css';
 import Skycons, {SkyconsType} from "react-skycons";
 
-function Weather() {
+function Weather( {currentComponentSelected} ) {
 // https://github.com/roadmanfong/react-skycons/blob/master/src/Skycons.tsx
 
   const weatherApiKey = '96ffa36770c56e45e94d5d4a1552f62c';
@@ -49,7 +49,7 @@ function Weather() {
           )
       }, [])
 
-      
+         
       function updateIconType(apiResult){
         
         const currentTime = new Date().getHours();
@@ -108,6 +108,20 @@ function Weather() {
     }
       
 
+  const [weatherClass, setWeatherClass ] = useState('');
+
+  useEffect(() => {
+    
+    if(currentComponentSelected === 'Dashboard') {
+        setWeatherClass('normal');
+    } else if (currentComponentSelected === 'Weather'){
+        setWeatherClass('is-selected');
+    } else {
+        setWeatherClass('is-not-selected');
+    }
+  }, [currentComponentSelected])
+
+
     if (error) {
         return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
@@ -115,7 +129,8 @@ function Weather() {
     } else {
 
         return (
-            <div className="weather-component">
+            <div className={`weather-component ${currentComponentSelected === 'Weather' ? 'scale-up' : 'normal'}`}>
+              <div className={weatherClass}></div>
                 <h1>{weatherItems.name}</h1>
                 {/* Capitalize below IIFE */}
                 <p className="weather-description">{(function(){

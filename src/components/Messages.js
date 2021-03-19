@@ -18,7 +18,7 @@ import axios from 'axios';
                 });
     }
     
-    function Messages() {
+    function Messages( { currentComponentSelected }  ) {
         const [loading, setLoading] = useState(true);
         const [userInfo, setUserInfo] = useState([]);
 
@@ -42,8 +42,23 @@ import axios from 'axios';
                 messages: ['messages1', 'messages2', 'messages3', 'message4']
             }
 
+            const [messageClass, setMessageClass ] = useState('');
+
+            useEffect(() => {
+              
+              if(currentComponentSelected === 'Dashboard') {
+                  setMessageClass('normal');
+              } else if (currentComponentSelected === 'Messages'){
+                  setMessageClass('is-selected');
+              } else {
+                  setMessageClass('is-not-selected');
+              }
+            }, [currentComponentSelected])
+
         return (
-            <div className="messages-component">
+            
+            <div className={`messages-component ${currentComponentSelected === 'Messages' ? 'scale-up' : 'normal'}`}>
+                <div className={messageClass}></div>
                  <h1>Messages</h1>   
                     {userInfo.map((user, index) => (
                         <div>
